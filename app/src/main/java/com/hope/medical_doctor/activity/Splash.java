@@ -18,6 +18,7 @@ import java.util.Calendar;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import cn.jpush.android.api.JPushInterface;
 
 
 /**
@@ -109,5 +110,18 @@ public class Splash extends AppCompatActivity implements SplashView {
         startActivity(intent);
         finish();
 
+    }
+
+    @Override
+    protected void onResume() {
+       JPushInterface.onResume(this);
+        super.onResume();
+    }
+
+
+    @Override
+    protected void onPause() {
+        JPushInterface.onPause(this);
+        super.onPause();
     }
 }

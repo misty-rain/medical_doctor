@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">医生版</string>
+    <string name="error_tag_empty">Tag 不能为空</string>
 </resources>
